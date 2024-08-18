@@ -20,8 +20,8 @@ type EditorInstance = ReactFlowInstance<NodeType, EdgeType>;
 function Editor() {
   const editorRef = useRef<HTMLDivElement>(null);
   const [edges, setEdges, onEdgesChange] = useEdgesState<EdgeType>([]);
-  const [nodes, setNodes, onNodesChange] = useNodesState<NodeType>([]);
-  const [flowInstance, setFlowInstance] = useState<EditorInstance | null>(null);
+  const [nodes, _, onNodesChange] = useNodesState<NodeType>([]);
+  const [_1, setFlowInstance] = useState<EditorInstance | null>(null);
 
   const handleFlowInstance = (ins: EditorInstance) => setFlowInstance(ins);
 
@@ -36,7 +36,8 @@ function Editor() {
       <ReactFlow
         fitView
         id="editor"
-        nodes={[]}
+        edges={edges}
+        nodes={nodes}
         maxZoom={1.5}
         minZoom={0.5}
         ref={editorRef}

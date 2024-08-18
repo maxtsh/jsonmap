@@ -1,4 +1,6 @@
+import { Button } from "@nextui-org/react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -12,6 +14,18 @@ function Home() {
           <p className="extralarge">
             A rich solution to visualize and edit JSON structures!
           </p>
+        </div>
+        <div className="mt-8 flex items-center gap-4">
+          <Link href="/app/editor">
+            <Button radius="full" color="primary" size="lg" variant="solid">
+              Get Started
+            </Button>
+          </Link>
+          <Link href="/about">
+            <Button radius="full" color="primary" size="lg" variant="bordered">
+              About Me
+            </Button>
+          </Link>
         </div>
       </section>
     </main>
