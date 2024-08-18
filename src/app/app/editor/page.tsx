@@ -2,6 +2,7 @@ import { ReactFlowProvider } from "@xyflow/react";
 import Header from "./_components/Header";
 import Editor from "./_components/Editor";
 import Sidebar from "./_components/Sidebar";
+import Footer from "./_components/Footer";
 
 function EditorPage() {
   return (
@@ -14,6 +15,7 @@ function EditorPage() {
             <Editor />
           </main>
         </div>
+        <Footer />
       </div>
     </ReactFlowProvider>
   );
